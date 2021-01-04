@@ -8,9 +8,6 @@ export default function Profile({
   location,
   avatar = 'https://www.flaticon.com/svg/static/icons/svg/3135/3135715.svg',
   stats,
-  // statsFollowers,
-  // statsViews,
-  // statsLikes,
 }) {
   return (
     <div className={s.profile}>
