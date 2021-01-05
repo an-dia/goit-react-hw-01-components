@@ -2,7 +2,6 @@
   width: 100%;
   height: auto;
   margin: 30px 0px;
-  padding-top: 20px;
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -11,6 +10,7 @@
 
 .description {
   text-align: center;
+  padding: 20px 0px;
 }
 
 .avatar {
@@ -21,16 +21,19 @@
   border-radius: 50%;
   border: 1px solid rgb(211, 210, 210);
   margin: 0px auto;
+  margin-bottom: 10px;
 }
 
 .name {
   font-weight: bold;
   font-size: larger;
   color: #414040;
+  margin-bottom: 10px;
 }
 
-.text {
+.text:not(:last-child) {
   color: rgb(148, 147, 147);
+  margin-bottom: 10px;
 }
 
 .stats {
@@ -42,7 +45,7 @@
 }
 
 .items {
-  composes: text;
+  color: rgb(148, 147, 147);
   width: 33.33%;
   padding: 15px 10px;
   display: flex;
@@ -54,6 +57,7 @@
 
 .label {
   font-size: small;
+  margin-bottom: 5px;
 }
 
 .quantity {
