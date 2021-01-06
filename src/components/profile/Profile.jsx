@@ -7,7 +7,7 @@ export default function Profile({
   tag,
   location,
   avatar = 'https://www.flaticon.com/svg/static/icons/svg/3135/3135715.svg',
-  stats,
+  stats: { followers, views, likes },
 }) {
   return (
     <div className={s.profile}>
@@ -21,15 +21,15 @@ export default function Profile({
       <ul className={s.stats}>
         <li className={s.items}>
           <span className={s.label}>Followers</span>
-          <span className={s.quantity}>{stats.followers}</span>
+          <span className={s.quantity}>{followers}</span>
         </li>
         <li className={s.items}>
           <span className={s.label}>Views</span>
-          <span className={s.quantity}>{stats.views}</span>
+          <span className={s.quantity}>{views}</span>
         </li>
         <li className={s.items}>
           <span className={s.label}>Likes</span>
-          <span className={s.quantity}>{stats.likes}</span>
+          <span className={s.quantity}>{likes}</span>
         </li>
       </ul>
     </div>
@@ -42,7 +42,4 @@ Profile.propTypes = {
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
-  // statsFollowers: PropTypes.number,
-  // statsViews: PropTypes.number,
-  // statsLikes: PropTypes.number,
 };
